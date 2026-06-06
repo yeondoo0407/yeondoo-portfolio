@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="경영학 및 마케팅, 크리에이티브 코딩을 탐구하는 정연주(yeondoo0407)의 포트폴리오 웹사이트입니다.">
+    <title>정연주 포트폴리오 | YEONDOO</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Background Canvas and Ambient Glows -->
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">YEONDOO<span>.</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="section-container hero-grid">
+                <div class="hero-text">
+                    <div class="badge-wrapper">
+                        <span class="glowing-badge">Business Administration & Marketing</span>
+                    </div>
+                    <h1 class="hero-title">
+                        안녕하세요, <br>
+                        <span class="highlight-text">정연주</span>입니다.
+                    </h1>
+                    <p class="hero-description">
+                        숭실대학교에서 경영학을 전공하며 데이터 기반 마케팅, CRM 전략 수립, 그리고 p5.js를 활용한 크리에이티브 테크놀로지를 탐구하고 있습니다. 창의적인 아이디어를 구조적인 마케팅 솔루션으로 설계합니다.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" id="btn-view-projects">프로젝트 보기</a>
+                        <a href="#contact" class="btn btn-secondary" id="btn-contact-me">연락하기</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-container">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-frame">
+                            <img src="profile.png" alt="정연주 아바타" class="avatar-img" id="avatar-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">ABOUT ME</span>
+                    <h2 class="section-title">학습과 열정의 기록</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="about-grid">
+                    <!-- Biography Card -->
+                    <div class="about-card bio-card">
+                        <h3>학력 및 경험</h3>
+                        <ul class="timeline">
+                            <li>
+                                <span class="time-period">2023.03 - 현재</span>
+                                <span class="time-title">숭실대학교 경영학부 재학</span>
+                                <p class="time-desc">마케팅 원론, 고객관계관리(CRM), 경영 정보 시스템(MIS) 등 이수 및 전략 수립 분석 진행</p>
+                            </li>
+                            <li>
+                                <span class="time-period">활동 경력</span>
+                                <span class="time-title">마케팅 인턴십 & 실무 실습</span>
+                                <p class="time-desc">브랜드 커뮤니케이션 기획 및 고객 세그먼트 분석, 데이터 활용 마케팅 프레임워크 설계</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="about-card skills-card">
+                        <h3>핵심 역량</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>CRM & 데이터 분석</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MS Office (Excel, PPT)</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>크리에이티브 코딩 (p5.js / Web)</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>마케팅 전략 및 기획</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">MY WORKS</span>
+                    <h2 class="section-title">대표 프로젝트</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: p5.js assignments -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder p5-bg">
+                            <div class="canvas-sketch-preview">
+                                <span>p5.js assignments</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Creative Coding</span>
+                            <h3>p5.js 과제 1-4 작품 전시</h3>
+                            <p>인터랙티브 디자인 및 비주얼 아트를 웹 캔버스 상에 구현한 개인 작품 모음집입니다. 마우스를 움직이거나 반응하는 역동적 예술을 선보입니다.</p>
+                            <a href="https://yeondoo0407.github.io/yondoo0407-p5-assignments/" target="_blank" rel="noopener noreferrer" class="project-link" id="project-link-1">작품 보기 &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: CRM Analysis -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder crm-bg">
+                            <div class="canvas-sketch-preview">
+                                <span>CRM Strategy</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Marketing</span>
+                            <h3>필립스 고객 관계 관리(CRM) 및 MIS 분석</h3>
+                            <p>필립스 브랜드의 고객 데이터를 바탕으로 효율적인 CRM 전략과 고객 관리 모델을 제안하는 실무형 비즈니스 분석서 프로젝트입니다.</p>
+                            <span class="project-link-disabled">경영학과 프로젝트</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Marketing Intern Portfolio -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder intern-bg">
+                            <div class="canvas-sketch-preview">
+                                <span>Intern Portfolio</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Internship</span>
+                            <h3>마케팅 인턴십 포트폴리오</h3>
+                            <p>실제 마케팅 환경에서 실행했던 타겟 고객 분석, SNS 브랜드 홍보 및 캠페인 지표(ROAS, CTR) 개선 성과 기록 모음입니다.</p>
+                            <span class="project-link-disabled">포토폴리오 문서</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <h2>새로운 가능성을<br>함께 만들어봐요.</h2>
+                        <p>협업 문의, 피드백 등 제안하실 내용이 있다면 언제든 편하게 메시지를 남겨주세요. 적극적으로 소통하고 검토하겠습니다.</p>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <span class="icon">📧</span>
+                                <span class="text">yeondoo0407@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="icon">📍</span>
+                                <span class="text">서울특별시, 대한민국</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('메시지가 성공적으로 전송되었습니다! (데모)');">
+                            <div class="form-group">
+                                <label for="name">이름</label>
+                                <input type="text" id="name" required placeholder="홍길동">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">이메일</label>
+                                <input type="email" id="email" required placeholder="example@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">메시지</label>
+                                <textarea id="message" required placeholder="전하고 싶은 메시지를 입력해 주세요."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-contact">메시지 보내기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Jung Yeon-ju. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/yeondoo0407" target="_blank" rel="noopener noreferrer" id="footer-github-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
