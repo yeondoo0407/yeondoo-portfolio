@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Open the main page at the cover instead of restoring a previous scroll position.
+        // Explicit section links still use the browser's normal anchor navigation.
+        if (!window.location.hash) {
+            if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+            window.addEventListener('pageshow', function () {
+                if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }, { once: true });
+        }
+    </script>
     <meta name="description" content="경영학 및 마케팅, 정량적 데이터 분석과 테크놀로지를 융합하는 정연주(YEONDOO)의 포트폴리오 웹사이트입니다.">
     <title>정연주 포트폴리오 | YEONDOO</title>
     <!-- Google Fonts: Outfit & Inter & Pretendard -->
@@ -49,7 +59,7 @@
                     </div>
                     <h1 class="hero-title">
                         데이터 기반 분석과 전략으로<br>
-                        비즈니스 가치를 만드는 <span class="highlight-text">정연주</span>입니다.
+                        비즈니스 가치를 만드는 <span style="display: inline-block; white-space: nowrap;"><span class="highlight-text">정연주</span>입니다.</span>
                     </h1>
                     <p class="hero-description">
                         숭실대학교 경영학부(2023.03 입학 ~ 2027.02 졸업예정)에서 마케팅·CRM 전략과 SCM 최적화, 정량적 데이터 분석을 전공하고 있습니다.
