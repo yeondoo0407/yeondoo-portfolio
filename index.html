@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="경영학 및 마케팅, 정량적 데이터 분석과 테크놀로지를 융합하는 정연주(YEONDOO)의 포트폴리오 웹사이트입니다.">
+    <title>정연주 포트폴리오 | YEONDOO</title>
+    <!-- Google Fonts: Outfit & Inter & Pretendard -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Background Canvas and Ambient Glows -->
+    <canvas id="ambient-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">YEONDOO<span>.</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="section-container hero-grid">
+                <div class="hero-text">
+                    <div class="badge-wrapper">
+                        <span class="glowing-badge">Business Administration & Data Analytics</span>
+                    </div>
+                    <h1 class="hero-title">
+                        데이터와 전략으로 가치를 창출하는<br>
+                        <span class="highlight-text">정연주</span>입니다.
+                    </h1>
+                    <p class="hero-description">
+                        숭실대학교 경영학부에서 마케팅·CRM 전략, SCM 최적화, 그리고 정량적 데이터 분석(Python, 엑셀)과 크리에이티브 테크놀로지를 탐구해왔습니다.
+                        책 속에 머무는 이론을 넘어, 현장의 문제를 데이터로 진단하고 실질적인 실행 방안을 설계합니다.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" id="btn-view-projects">프로젝트 둘러보기</a>
+                        <a href="#experience" class="btn btn-outline">경력 & 대내외활동</a>
+                        <a href="#contact" class="btn btn-secondary" id="btn-contact-me">연락하기</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-container">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-frame">
+                            <img src="assets/profile_photo.jpg" alt="정연주 프로필 사진" class="avatar-img" id="avatar-image">
+                        </div>
+                        <div class="avatar-badge">
+                            <span class="status-dot"></span> Open for Opportunities
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">ABOUT ME</span>
+                    <h2 class="section-title">학습과 열정의 기록</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="about-grid">
+                    <!-- Education & Bio Card -->
+                    <div class="about-card bio-card">
+                        <h3>학력 및 전공 교육</h3>
+                        <ul class="timeline">
+                            <li>
+                                <span class="time-period">2023.03 - 현재</span>
+                                <span class="time-title">숭실대학교 경영학부 재학</span>
+                                <p class="time-desc">마케팅 전략, 고객관계관리(CRM), SCM 및 비즈니스 데이터 분석 집중 이수</p>
+                            </li>
+                            <li>
+                                <span class="time-period">주요 이수 교과목</span>
+                                <span class="time-title">이론과 실무를 잇는 핵심 전공</span>
+                                <div class="course-tags">
+                                    <span class="tag">경영정보시스템전략 (3학점)</span>
+                                    <span class="tag">오퍼레이션매니지먼트 (3학점)</span>
+                                    <span class="tag">경영수리와통계 (3학점)</span>
+                                    <span class="tag">기획및조정관리 (3학점)</span>
+                                    <span class="tag">인적자원관리 (3학점)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Core Strengths Card -->
+                    <div class="about-card strengths-card">
+                        <h3>핵심 가치 및 업무 강점</h3>
+                        <div class="strengths-list">
+                            <div class="strength-item">
+                                <div class="strength-icon">🎯</div>
+                                <div class="strength-text">
+                                    <h4>끝까지 몰입하며 책임지는 실행력</h4>
+                                    <p>아르바이트와 프로젝트 모두 단순 반복을 넘어, 고객 니즈와 매출 향상을 스스로 분석하고 주도적으로 행동으로 옮깁니다.</p>
+                                </div>
+                            </div>
+                            <div class="strength-item">
+                                <div class="strength-icon">📊</div>
+                                <div class="strength-text">
+                                    <h4>데이터 기반 의사결정 & 구조화</h4>
+                                    <p>DART 공시 재무제표 전처리부터 피어슨 상관분석, 회귀분석까지 숫자를 통해 비즈니스 현상의 인과관계를 검증합니다.</p>
+                                </div>
+                            </div>
+                            <div class="strength-item">
+                                <div class="strength-icon">🤝</div>
+                                <div class="strength-text">
+                                    <h4>비폭력 대화와 구조적 협업</h4>
+                                    <p>팀 내 갈등 상황에서 배제하기보다 역할을 명확히 재조정하고 소통의 장을 마련해 모두가 완주하는 원팀을 이끕니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="skills-wrapper">
+                    <h3 class="subsection-title">보유 기술 및 역량</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>데이터 분석 (Python, OLS, 통계분석)</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>스프레드시트 & 문서 (Excel, PPT, Word)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>마케팅 & CRM 전략 수립</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>크리에이티브 코딩 & 웹 (p5.js, Web Tech)</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Activities Section -->
+        <section id="experience" class="experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">EXPERIENCE & ACTIVITIES</span>
+                    <h2 class="section-title">실무 경험 및 대내외활동</h2>
+                    <p class="section-lead">다양한 조직에서 주도적으로 문제를 발견하고 해결해 온 활동 기록입니다. 카드를 클릭하면 상세 행동을 확인할 수 있습니다.</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="experience-grid">
+                    <!-- Exp 1: 챔프스터디 해커스 -->
+                    <div class="exp-card clickable-card" data-exp-id="exp-hackers">
+                        <div class="exp-badge">산학인턴</div>
+                        <div class="exp-period">2025.12.29 ~ 2026.02.28</div>
+                        <h3 class="exp-title">해커스 챔프스터디 (교육기획 3팀)</h3>
+                        <p class="exp-role">온라인 플랫폼 운영 & 마케팅 콘텐츠 기획 인턴</p>
+                        <ul class="exp-highlights">
+                            <li>해커스 공식 네이버 카페 운영 및 타깃 맞춤형 데일리 콘텐츠·이벤트 기획</li>
+                            <li>오픈채팅/카페 URL 유입 추적 및 엑셀 기반 KPI 작성 정기 보고서 제출</li>
+                            <li>AI 도구를 활용한 업무 검증 및 보고 체계 디지털 전환 실무 경험</li>
+                        </ul>
+                        <div class="card-action-hint">
+                            <span>자세한 행동 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Exp 2: 사진편집 동아리 FRAME -->
+                    <div class="exp-card clickable-card" data-exp-id="exp-frame">
+                        <div class="exp-badge">동아리 임원진</div>
+                        <div class="exp-period">2025.03.02 ~ 2025.11.10</div>
+                        <h3 class="exp-title">숭실대학교 사진편집 동아리 FRAME</h3>
+                        <p class="exp-role">출사장 & SNS 홍보 기획 담당</p>
+                        <ul class="exp-highlights">
+                            <li>매주 출사 장소 및 이동 동선 계획표 제작, 원활한 행사 운영 총괄</li>
+                            <li>동아리 인스타그램 피드 톤앤매너 리뉴얼로 게시물 조회수 50%(3,000회) 증가</li>
+                            <li>달력 공모전 행사 기획 및 교내 축제 부스 홍보 포스터 디자인 제작</li>
+                        </ul>
+                        <div class="card-action-hint">
+                            <span>자세한 행동 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Exp 3: 메가커피 & 파리바게뜨 -->
+                    <div class="exp-card clickable-card" data-exp-id="exp-cx">
+                        <div class="exp-badge">현장 운영 & CX</div>
+                        <div class="exp-period">2024.07 ~ 2026.04 (약 3년)</div>
+                        <h3 class="exp-title">고객 경험(CX) 및 매장 운영 관리</h3>
+                        <p class="exp-role">메가커피 & 파리바게뜨 장기 근무</p>
+                        <ul class="exp-highlights">
+                            <li>상권 및 시간대별 고객 유형(학생/직장인) 분석을 통한 맞춤형 메뉴 추천</li>
+                            <li>고객 니즈 파악 후 주말 인기 메뉴 판매 자발적 재개로 매장 매출 신장</li>
+                            <li>피크타임 주문 동선 효율화 및 동료 협업 프로세스 개선으로 대기 시간 단축</li>
+                        </ul>
+                        <div class="card-action-hint">
+                            <span>자세한 행동 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Exp 4: 학생회 미디어국원 -->
+                    <div class="exp-card clickable-card" data-exp-id="exp-student-council">
+                        <div class="exp-badge">교내 자치활동</div>
+                        <div class="exp-period">2022.03.02 ~ 2022.12.31</div>
+                        <h3 class="exp-title">국제통상학과 학생회 BGM</h3>
+                        <p class="exp-role">미디어국원 (홍보 콘텐츠 기획/제작)</p>
+                        <ul class="exp-highlights">
+                            <li>학과 공식 인스타그램 계정 관리 및 행사 공지 카드뉴스/포스터 디자인</li>
+                            <li>신입생 대상 '학생회비 혜택' 체감형 홍보로 납부율 50% 이상 달성 기여</li>
+                            <li>학과 축제 부스 기획 및 학우 간 참여를 유도하는 소통 창구 역할 수행</li>
+                        </ul>
+                        <div class="card-action-hint">
+                            <span>자세한 행동 보기 &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">PORTFOLIO PROJECTS</span>
+                    <h2 class="section-title">대표 전공 프로젝트</h2>
+                    <p class="section-lead">비즈니스 전략, 정량적 데이터 분석, 코딩을 접목하여 진행한 프로젝트 모음입니다. 카드를 클릭하면 본인의 구체적인 행동과 산출물(PDF, PPT)을 확인할 수 있습니다.</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="project-filter-tabs">
+                    <button class="filter-btn active" data-filter="all">전체보기 (All)</button>
+                    <button class="filter-btn" data-filter="strategy">전략 & MIS (Strategy)</button>
+                    <button class="filter-btn" data-filter="analytics">데이터 분석 (Analytics)</button>
+                    <button class="filter-btn" data-filter="tech">코딩 & 테크 (Tech & Coding)</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-container">
+                    <!-- Project 1: 경진대회 -->
+                    <div class="project-card clickable-card" data-project-id="proj-contest" data-category="analytics">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-analytics">Data Analytics</span>
+                            <span class="project-date">2025.09 - 2025.11</span>
+                        </div>
+                        <h3 class="project-title">OTT(TVING) vs 영화관(CGV) 비즈니스 구조 및 재무 안정성 분석</h3>
+                        <p class="project-summary">경영 데이터 분석 경진대회 출품작. DART 전자공시 분기별 재무데이터를 전처리하고 피어슨 상관분석 및 Python OLS 다중선형 회귀분석을 통해 외부 충격 회복력을 검증했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#DART공시</span>
+                            <span>#Python_OLS</span>
+                            <span>#재무데이터전처리</span>
+                            <span>#ROA_ROE분석</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 분석 보고서 PDF 포함</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: 필립스 MIS -->
+                    <div class="project-card clickable-card" data-project-id="proj-philips" data-category="strategy">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-strategy">Strategy & MIS</span>
+                            <span class="project-date">2026.03 - 2026.05</span>
+                        </div>
+                        <h3 class="project-title">필립스(Philips) 디지털 헬스케어 MIS 전략 및 플랫폼 전환 제안</h3>
+                        <p class="project-summary">경영정보시스템전략 프로젝트. 필립스의 의료용·개인용 헬스케어 시장 환경을 비교하고, CRM 체계 분석 및 블록체인 기반 MIS, HaaS 의료 시스템 플랫폼 전환 전략을 설계했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#MIS전략</span>
+                            <span>#CRM분석</span>
+                            <span>#디지털헬스케어</span>
+                            <span>#HaaS플랫폼</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 발표자료 PDF 포함</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: 돌고래유괴단 -->
+                    <div class="project-card clickable-card" data-project-id="proj-dolphiners" data-category="strategy">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-strategy">Strategy & Org</span>
+                            <span class="project-date">2025.03 - 2025.05</span>
+                        </div>
+                        <h3 class="project-title">크리에이티브 기업 '돌고래유괴단' 조직문화 및 경영전략 분석</h3>
+                        <p class="project-summary">현직 감독(서대원 PD)을 직접 심층 인터뷰하여 인바운드 수주 모델과 종합 대행사 전환 프로세스를 규명하고, 4개년 재무 데이터 분석과 AI 도입 공정 효율화 SWOT 전략을 수립했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#현직PD인터뷰</span>
+                            <span>#조직프로세스</span>
+                            <span>#4개년재무분석</span>
+                            <span>#SWOT전략</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 인터뷰 PDF & PPTX</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: 여행갈까 -->
+                    <div class="project-card clickable-card" data-project-id="proj-travel" data-category="strategy">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-strategy">Business Planning</span>
+                            <span class="project-date">2024.09 - 2024.12</span>
+                        </div>
+                        <h3 class="project-title">사용자 맞춤형 여행 일정 설계 및 VR 사전체험 플랫폼 '여행갈까'</h3>
+                        <p class="project-summary">4인 팀 조장으로 프로젝트 총괄. AI·빅데이터 기반 여행지 추천 플랫폼 사업계획을 수립하고, 서비스 런칭을 위한 12단계 마일스톤 간트차트 및 추정 손익계산서, 자금조달 계획을 모델링했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#팀장_조율</span>
+                            <span>#간트차트설계</span>
+                            <span>#추정손익계산서</span>
+                            <span>#플랫폼사업기획</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 사업계획서 PDF 포함</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: 지속가능 SCM -->
+                    <div class="project-card clickable-card" data-project-id="proj-scm" data-category="strategy">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-strategy">SCM Operations</span>
+                            <span class="project-date">2024.03 - 2024.05</span>
+                        </div>
+                        <h3 class="project-title">지속가능경영 전략 및 글로벌 스마트 공급망(SCM) 구축 사례 연구</h3>
+                        <p class="project-summary">탄력(경제), 그린(환경), 상생(사회) 3대 관점의 SCM 혁신 프레임워크를 도출하고 노키아, 삼성SDS, 현대차, 월마트, 포드 사례를 분석하여 통합 스마트 공급망 네트워크를 제안했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#SCM최적화</span>
+                            <span>#ESG_지속가능경영</span>
+                            <span>#스마트공급망</span>
+                            <span>#글로벌기업사례</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 연구 보고서 PDF 포함</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: p5.js 비주얼 포트폴리오 -->
+                    <div class="project-card clickable-card" data-project-id="proj-p5" data-category="tech">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-tech">Creative Coding</span>
+                            <span class="project-date">2026.03 - 2026.06</span>
+                        </div>
+                        <h3 class="project-title">p5.js 인터랙티브 그래픽 & 생성형 AI 활용 웹페이지 제작</h3>
+                        <p class="project-summary">사용자 인터랙션에 반응하는 p5.js 디지털 그래픽 작품 4종을 직접 코딩하고, Google Antigravity와 자연어로 협업하여 GitHub Pages 기반의 반응형 웹 포트폴리오를 제작 및 배포했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#p5js</span>
+                            <span>#인터랙티브아트</span>
+                            <span>#Antigravity협업</span>
+                            <span>#GitHub_Pages배포</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">🔗 실시간 배포 웹사이트 링크</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: 이혼율 분석 -->
+                    <div class="project-card clickable-card" data-project-id="proj-divorce" data-category="analytics">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-analytics">Data Analytics</span>
+                            <span class="project-date">2023.09 - 2023.12</span>
+                        </div>
+                        <h3 class="project-title">공공데이터를 활용한 사회적 현상(이혼율 감소 원인) 분석</h3>
+                        <p class="project-summary">4인 팀 팀장. 통계청 마이크로데이터를 탐색하고 Python Colab을 활용해 혼인 건수 감소, 청년 고용 및 소비자 물가지수 데이터를 다각도로 시각화·교차 검증하여 결론을 도출했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#팀장_리드</span>
+                            <span>#통계청공공데이터</span>
+                            <span>#Python_Colab</span>
+                            <span>#시각화분석</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 발표 PPT & 보고서</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Python RPG 게임 -->
+                    <div class="project-card clickable-card" data-project-id="proj-rpg" data-category="tech">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-tech">Software Dev</span>
+                            <span class="project-date">2023.03 - 2023.06</span>
+                        </div>
+                        <h3 class="project-title">Python 객체지향 기반 텍스트 RPG 게임 프로그램 개발</h3>
+                        <p class="project-summary">5인 팀 팀장. Player와 Enemy 클래스를 객체지향 방식으로 모델링하고 조건문, 반복 루프, random/time 모듈 및 winsound 사운드 이펙트를 결합하여 완성도 높은 게임 로직을 구현했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#팀장_리드</span>
+                            <span>#Python_OOP</span>
+                            <span>#클래스설계</span>
+                            <span>#로직구현</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">💻 파이썬 소스코드 & 보고서</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 9: ESG 공모전 -->
+                    <div class="project-card clickable-card" data-project-id="proj-esg" data-category="strategy">
+                        <div class="project-card-header">
+                            <span class="project-tag tag-strategy">ESG Strategy</span>
+                            <span class="project-date">2024.08</span>
+                        </div>
+                        <h3 class="project-title">용인시산업진흥원 ESG 경영 아이디어 공모전 (커피찌꺼기 수거함)</h3>
+                        <p class="project-summary">서울시 일일 커피 소비량과 원두박 발생량 데이터를 엑셀로 정량 모델링하고, 전용 수거함 도입 시 폐수 정화 효과 및 탄소 배출 저감 효과를 산출하여 친환경 비즈니스 제안서를 작성했습니다.</p>
+                        <div class="project-meta-tags">
+                            <span>#ESG경영</span>
+                            <span>#정량적데이터모델링</span>
+                            <span>#아이디어기획</span>
+                            <span>#친환경순환</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="deliverable-badge">📄 공모전 제안서 문서</span>
+                            <span class="view-detail-btn">자세히 보기 &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates & Licenses Section -->
+        <section id="certificates" class="certificates-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">QUALIFICATIONS</span>
+                    <h2 class="section-title">보유 자격증 및 어학</h2>
+                    <p class="section-lead">지속적인 자기개발을 통해 취득한 국가공인 및 국제 공인 자격증 목록입니다. 카드를 클릭하면 취득 정보 및 인증 내역을 확인할 수 있습니다.</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="certificates-grid">
+                    <!-- Cert 1: ADsP -->
+                    <div class="cert-card clickable-card" data-cert-id="cert-adsp">
+                        <div class="cert-icon-box">📊</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">한국데이터산업진흥원</span>
+                            <h3 class="cert-name">데이터분석준전문가 (ADsP)</h3>
+                            <p class="cert-detail">자격번호: <strong>ADsP-049010317</strong></p>
+                            <span class="cert-date">취득일: 2026.06.05</span>
+                        </div>
+                        <div class="cert-preview-badge">인증서 확인 ↗</div>
+                    </div>
+
+                    <!-- Cert 2: 컴활 2급 -->
+                    <div class="cert-card clickable-card" data-cert-id="cert-com2">
+                        <div class="cert-icon-box">💻</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">대한상공회의소</span>
+                            <h3 class="cert-name">컴퓨터활용능력 2급</h3>
+                            <p class="cert-detail">자격번호: <strong>25-K9-050014</strong></p>
+                            <span class="cert-date">취득일: 2025.08.12</span>
+                        </div>
+                        <div class="cert-preview-badge">자격 확인 ↗</div>
+                    </div>
+
+                    <!-- Cert 3: MOS Excel Expert -->
+                    <div class="cert-card clickable-card" data-cert-id="cert-mos">
+                        <div class="cert-icon-box">📈</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">Microsoft</span>
+                            <h3 class="cert-name">MOS Excel 2016 Expert</h3>
+                            <p class="cert-detail">인증번호: <strong>oRrn-uST5</strong></p>
+                            <span class="cert-date">취득일: 2025.06.10</span>
+                        </div>
+                        <div class="cert-preview-badge">인증서 확인 ↗</div>
+                    </div>
+
+                    <!-- Cert 4: 회계관리 2급 -->
+                    <div class="cert-card clickable-card" data-cert-id="cert-acc">
+                        <div class="cert-icon-box">📑</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">삼일회계법인</span>
+                            <h3 class="cert-name">회계관리 2급 (국가공인)</h3>
+                            <p class="cert-detail">자격번호: <strong>2-116-00188</strong></p>
+                            <span class="cert-date">취득일: 2024.08.02</span>
+                        </div>
+                        <div class="cert-preview-badge">자격 확인 ↗</div>
+                    </div>
+
+                    <!-- Cert 5: 한국사 1급 -->
+                    <div class="cert-card clickable-card" data-cert-id="cert-history">
+                        <div class="cert-icon-box">📜</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">국사편찬위원회</span>
+                            <h3 class="cert-name">한국사능력검정시험 1급</h3>
+                            <p class="cert-detail">인증번호: <strong>79-102957</strong></p>
+                            <span class="cert-date">취득일: 2026.08.21</span>
+                        </div>
+                        <div class="cert-preview-badge">인증서 확인 ↗</div>
+                    </div>
+
+                    <!-- Cert 6: OPIc -->
+                    <div class="cert-card clickable-card" data-cert-id="cert-opic">
+                        <div class="cert-icon-box">🗣️</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">ACTFL (미국외국어교육위원회)</span>
+                            <h3 class="cert-name">OPIc (영어 말하기) IM2</h3>
+                            <p class="cert-detail">인증번호: <strong>H6RT-3MFF-9525-PQKJ-QAJ3</strong></p>
+                            <span class="cert-date">취득일: 2026.09.07</span>
+                        </div>
+                        <div class="cert-preview-badge">성적표 확인 ↗</div>
+                    </div>
+
+                    <!-- Cert 7: 운전면허 -->
+                    <div class="cert-card" data-cert-id="cert-driver">
+                        <div class="cert-icon-box">🚗</div>
+                        <div class="cert-info">
+                            <span class="cert-agency">경기남부경찰청</span>
+                            <h3 class="cert-name">자동차운전면허 2종 보통</h3>
+                            <p class="cert-detail">국가공인 운전면허</p>
+                            <span class="cert-date">취득일: 2024.07.08</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <h2>새로운 가능성을<br>함께 만들어봐요.</h2>
+                        <p>기업의 비즈니스 문제를 함께 해결하고 성장할 기회를 기다립니다. 문의나 피드백이 있으시다면 편하게 연락해 주세요!</p>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <span class="icon">📧</span>
+                                <span class="text">yeondoo0407@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="icon">📍</span>
+                                <span class="text">서울특별시 동작구 / 경기도</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="icon">🎓</span>
+                                <span class="text">숭실대학교 경영학부 (2023.03 ~ 현재)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('소중한 메시지가 전송되었습니다. 확인 후 신속하게 연락드리겠습니다!');">
+                            <div class="form-group">
+                                <label for="name">성함 / 기업명</label>
+                                <input type="text" id="name" required placeholder="홍길동 / 인사담당자">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">회신받으실 이메일</label>
+                                <input type="email" id="email" required placeholder="example@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">제안 및 문의 내용</label>
+                                <textarea id="message" required placeholder="채용 포지션, 프로젝트 협업 제안 또는 메시지를 자유롭게 남겨주세요."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-contact">메시지 보내기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Detail Modal -->
+    <div class="modal-overlay" id="detail-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modal-close-btn" aria-label="모달 닫기">&times;</button>
+            <div class="modal-body" id="modal-content-area">
+                <!-- Dynamically populated via index.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 정연주 (Jung Yeon-ju). All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/yeondoo0407" target="_blank" rel="noopener noreferrer" id="footer-github-link">GitHub 프로필</a>
+                <a href="https://yeondoo0407.github.io/yondoo0407-p5-assignments/" target="_blank" rel="noopener noreferrer">p5.js 과제 전시</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
