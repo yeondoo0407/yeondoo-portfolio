@@ -127,7 +127,7 @@ body {
 }
 
 .main-header.scrolled {
-    background: rgba(11, 13, 16, 0.85);
+    background: rgba(11, 13, 16, 0.88);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     padding: 0.9rem 2rem;
@@ -249,7 +249,7 @@ section {
 .section-lead {
     color: var(--text-secondary);
     font-size: 1.05rem;
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto 1.5rem;
     line-height: 1.7;
 }
@@ -355,10 +355,10 @@ section {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     font-weight: 800;
-    line-height: 1.25;
-    letter-spacing: -1.2px;
+    line-height: 1.3;
+    letter-spacing: -1px;
     margin-bottom: 1.5rem;
 }
 
@@ -369,11 +369,42 @@ section {
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    line-height: 1.75;
+    margin-bottom: 2rem;
+    max-width: 620px;
+    line-height: 1.8;
+}
+
+/* Hero Info Pills */
+.hero-info-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2.2rem;
+}
+
+.info-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.45rem 1rem;
+    border-radius: 12px;
+    width: fit-content;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    transition: var(--transition-fast);
+}
+
+.info-pill:hover {
+    border-color: rgba(163, 230, 53, 0.3);
+    background: rgba(163, 230, 53, 0.04);
+}
+
+.pill-icon {
+    font-size: 1.1rem;
 }
 
 .hero-actions {
@@ -388,10 +419,11 @@ section {
     position: relative;
 }
 
-.avatar-container {
+/* Rectangular ID Photo Styling */
+.avatar-container.rectangular-avatar {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 375px; /* Clean 3:4 portrait ratio */
 }
 
 .avatar-glow {
@@ -401,7 +433,7 @@ section {
     width: 90%;
     height: 90%;
     background: radial-gradient(circle, var(--accent) 0%, transparent 75%);
-    filter: blur(28px);
+    filter: blur(30px);
     opacity: 0.35;
     z-index: 1;
 }
@@ -410,12 +442,12 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 20px; /* Elegant rounded rectangle */
     border: 3px solid rgba(163, 230, 53, 0.4);
     background: linear-gradient(135deg, rgba(22, 26, 34, 0.9) 0%, rgba(11, 13, 16, 0.95) 100%);
     overflow: hidden;
     z-index: 2;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(163, 230, 53, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,18 +464,18 @@ section {
 
 .avatar-container:hover .avatar-frame {
     border-color: var(--accent);
-    box-shadow: 0 20px 50px rgba(163, 230, 53, 0.25);
-    transform: scale(1.03);
+    box-shadow: 0 20px 50px rgba(163, 230, 53, 0.28);
+    transform: scale(1.02);
 }
 
 .avatar-badge {
     position: absolute;
-    bottom: 8px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(11, 13, 16, 0.9);
-    border: 1px solid var(--border-color);
-    padding: 0.4rem 1rem;
+    background: rgba(11, 13, 16, 0.94);
+    border: 1px solid rgba(163, 230, 53, 0.3);
+    padding: 0.45rem 1.1rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
@@ -453,7 +485,7 @@ section {
     align-items: center;
     gap: 0.5rem;
     white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
 .status-dot {
@@ -530,7 +562,7 @@ section {
 }
 
 .time-period {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 700;
     color: var(--accent);
     text-transform: uppercase;
@@ -550,6 +582,23 @@ section {
     font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+.bio-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+}
+
+.bio-contact-details p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+}
+
+.bio-contact-details strong {
+    color: var(--text-primary);
+    margin-right: 0.4rem;
 }
 
 .course-tags {
@@ -1037,14 +1086,33 @@ section {
 
 .detail-item .icon {
     font-size: 1.3rem;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+}
+
+.detail-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.detail-item .text {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
 .contact-form {
@@ -1095,7 +1163,7 @@ section {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(5, 7, 10, 0.8);
+    background: rgba(5, 7, 10, 0.85);
     backdrop-filter: blur(14px);
     z-index: 2000;
     display: none;
@@ -1343,12 +1411,23 @@ section {
     background: #000;
     display: flex;
     justify-content: center;
+    padding: 0.5rem;
 }
 
 .cert-preview-img-wrapper img {
     max-width: 100%;
     max-height: 550px;
     object-fit: contain;
+    border-radius: 8px;
+}
+
+.cert-preview-iframe {
+    width: 100%;
+    height: 520px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #1e293b;
+    margin-top: 1.2rem;
 }
 
 /* Footer */
@@ -1414,21 +1493,25 @@ section {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
     
     .hero-description {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .hero-info-pills {
+        align-items: center;
+    }
     
     .hero-actions {
         justify-content: center;
     }
     
-    .avatar-container {
-        width: 250px;
-        height: 250px;
+    .avatar-container.rectangular-avatar {
+        width: 240px;
+        height: 320px;
     }
     
     .about-grid {

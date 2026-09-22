@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2025.08.12',
             number: '25-K9-050014',
             desc: '스프레드시트(엑셀) 실무 데이터 입력, 표 작성, 함수 계산, 데이터베이스 관리 등 OA 실무 처리 역량을 인증받은 국가공인 자격입니다.',
-            imgUrl: 'assets/certificates/com_mos_acc.png'
+            imgUrl: 'assets/certificates/com_2nd.png'
         },
         'cert-mos': {
             title: 'MOS Excel 2016 Expert',
@@ -475,8 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2025.06.10',
             number: 'oRrn-uST5',
             desc: 'Microsoft에서 주관하는 엑셀 최고 등급 국제 공인 자격으로, 고급 수식, 데이터 피벗 분석, 매크로 등 전문적인 비즈니스 분석 역량을 증명합니다.',
-            imgUrl: 'assets/certificates/com_mos_acc.png',
-            pdfUrl: 'assets/certificates/mos_excel_expert_2016.pdf'
+            pdfUrl: 'assets/certificates/mos_excel.pdf'
         },
         'cert-acc': {
             title: '회계관리 2급 (국가공인)',
@@ -484,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2024.08.02',
             number: '2-116-00188',
             desc: '재무상태표, 손익계산서 등 기업 재무제표의 기본 원리와 계정과목, 회계 순환 과정을 체계적으로 이해하고 있음을 검증받은 국가공인 자격입니다.',
-            imgUrl: 'assets/certificates/com_mos_acc.png'
+            pdfUrl: 'assets/certificates/accounting_2nd.pdf'
         },
         'cert-history': {
             title: '한국사능력검정시험 1급',
@@ -680,6 +679,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             }
 
+            let previewContent = '';
+            if (data.pdfUrl) {
+                previewContent = `
+                    <iframe class="cert-preview-iframe" src="${data.pdfUrl}" title="${data.title} 인증서"></iframe>
+                `;
+            } else if (data.imgUrl) {
+                previewContent = `
+                    <div class="cert-preview-img-wrapper">
+                        <img src="${data.imgUrl}" alt="${data.title} 인증 내역">
+                    </div>
+                `;
+            }
+
             const html = `
                 <span class="modal-header-tag">공인 자격 인증</span>
                 <h2 class="modal-title">${data.title}</h2>
@@ -708,9 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="modal-section">
                     <h4 class="modal-section-title"><span>🔍</span> 자격 증빙 확인</h4>
-                    <div class="cert-preview-img-wrapper">
-                        <img src="${data.imgUrl}" alt="${data.title} 인증 내역">
-                    </div>
+                    ${previewContent}
                 </div>
             `;
 
