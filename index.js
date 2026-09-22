@@ -475,6 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2025.06.10',
             number: 'oRrn-uST5',
             desc: 'Microsoft에서 주관하는 엑셀 최고 등급 국제 공인 자격으로, 고급 수식, 데이터 피벗 분석, 매크로 등 전문적인 비즈니스 분석 역량을 증명합니다.',
+            imgUrl: 'assets/certificates/mos_excel.png',
             pdfUrl: 'assets/certificates/mos_excel.pdf'
         },
         'cert-acc': {
@@ -483,6 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2024.08.02',
             number: '2-116-00188',
             desc: '재무상태표, 손익계산서 등 기업 재무제표의 기본 원리와 계정과목, 회계 순환 과정을 체계적으로 이해하고 있음을 검증받은 국가공인 자격입니다.',
+            imgUrl: 'assets/certificates/accounting_2nd.png',
             pdfUrl: 'assets/certificates/accounting_2nd.pdf'
         },
         'cert-history': {
@@ -671,24 +673,24 @@ document.addEventListener('DOMContentLoaded', () => {
             let pdfBtn = '';
             if (data.pdfUrl) {
                 pdfBtn = `
-                    <div style="margin-top: 1.2rem;">
+                    <div style="margin-top: 1.2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
                         <a href="${data.pdfUrl}" target="_blank" class="modal-btn modal-btn-primary">
-                            📄 공식 인증서 PDF 원본 열람
+                            📄 공식 인증서 PDF 원본 새 창 열람 / 다운로드 ↗
                         </a>
                     </div>
                 `;
             }
 
             let previewContent = '';
-            if (data.pdfUrl) {
-                previewContent = `
-                    <iframe class="cert-preview-iframe" src="${data.pdfUrl}" title="${data.title} 인증서"></iframe>
-                `;
-            } else if (data.imgUrl) {
+            if (data.imgUrl) {
                 previewContent = `
                     <div class="cert-preview-img-wrapper">
                         <img src="${data.imgUrl}" alt="${data.title} 인증 내역">
                     </div>
+                `;
+            } else if (data.pdfUrl) {
+                previewContent = `
+                    <iframe class="cert-preview-iframe" src="${data.pdfUrl}" title="${data.title} 인증서"></iframe>
                 `;
             }
 
